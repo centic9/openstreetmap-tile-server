@@ -9,7 +9,7 @@ This container allows you to easily set up an OpenStreetMap PNG tile server give
 
 After changing files you can rebuild the docker container locally.
 
-    docker build -t openstreetmap-tile-server .
+    docker build -t openstreetmap-tile-server:local .
 
 If you want to use the custom docker container, you need to use 
 `openstreetmap-tile-server` instead of `overv/openstreetmap-tile-server`
