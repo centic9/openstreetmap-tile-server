@@ -1,7 +1,7 @@
 # Suggested minimal settings from
 # https://ircama.github.io/osm-carto-tutorials/tile-server-ubuntu/
 
-shared_buffers = 512MB
+shared_buffers = 1GB
 min_wal_size = 1GB
 # max_wal_size = 2GB # Overridden below
 maintenance_work_mem = 1GB
@@ -30,4 +30,3 @@ max_wal_senders = 0
 autovacuum_work_mem = 512MB
 checkpoint_timeout = 60min
 checkpoint_completion_target = 0.9
-
