@@ -187,6 +187,7 @@ if [ "$1" == "run" ]; then
     trap stop_handler SIGTERM
 
     sudo -u renderer renderd -f -c /etc/renderd.conf &
+    #G_MESSAGES_DEBUG=all sudo -E renderd -f -c /etc/renderd.conf
     child=$!
     wait "$child"
 
