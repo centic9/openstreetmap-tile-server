@@ -95,6 +95,11 @@ if [ "$1" == "import" ]; then
         OSM2PGSQL_EXTRA_ARGS="${OSM2PGSQL_EXTRA_ARGS:-} --flat-nodes /data/database/flat_nodes.bin"
     fi
 
+    # Print out some information about the imported data so the user can have a guess at progress/required time to finish importing
+    # this also may take a bit for larger files as the whole content needs to be read, but it is still much less than the overall
+    # runtime
+    osmium fileinfo -e /data/region.osm.pbf
+
     # Import data
     sudo -u renderer osm2pgsql -d gis --create --slim -G --hstore  \
       --tag-transform-script /data/style/${NAME_LUA:-openstreetmap-carto.lua}  \
