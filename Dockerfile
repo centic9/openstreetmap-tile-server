@@ -56,6 +56,7 @@ RUN apt-get update \
  fonts-noto-cjk \
  fonts-noto-hinted \
  fonts-noto-unhinted \
+ fonts-noto-extra \
  fonts-unifont \
  gnupg2 \
  gdal-bin \
